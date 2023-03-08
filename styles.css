@@ -1,0 +1,85 @@
+body {
+    background-color: white;
+}
+
+.content-end {
+    position: absolute;
+    right: 0 ;
+}
+
+h1 {
+    font-family: Arial, Helvetica , sans-serif ;
+    text-align: center ;
+    color: black ;
+    font-size: 5vh ;
+    margin: 1vh ;
+}
+
+.dropdown {
+    margin: 0 2% ;
+}
+
+.dropdown-menu {
+    min-width: 1vw ;
+}
+
+.button-response {
+    font-size: 2.5vh ;
+}
+
+#demo {
+    font-family: Arial, Helvetica, sans-serif ;
+    color: black;
+    text-align: left ;
+    font-size: 2.5vh ;
+    padding: 2% ;
+}
+
+div {
+    display: block ;
+}
+
+.bar-container {
+    margin: 1% 2% ;
+    width: auto ;
+    height: 70vh ;
+    display: flex ;
+    position: relative;
+}
+
+.container-bar {
+    background-color: #4285f4 ;
+    position: absolute;
+    margin: 0 1px;
+}
+
+.container-bar-intermediate {
+    background-color: #FFD700 ;
+}
+
+.final {
+    background-color: #00FF7F ;
+}
+
+.foot {
+    text-align: center;
+    color: black ;
+}
+
+.foot-link {
+    color: black;
+}
+
+.social-icon {
+    color: black;
+    margin: 20px 10px ;
+}
+
+.social-icon:hover {
+    color: #4285f4 ;
+}
+
+
+
+
+

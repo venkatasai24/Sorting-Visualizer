@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" href="sort.png">
+    <!-- CDN Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+    </script>
+    <!-- Font awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Title  -->
+    <title>Sorting Visualizer</title>
+</head>
+<body onload="randomizeEntire()">
+    <h1 id="sort">Sorting Visualizer</h1>    
+    <h1 style="font-size: 1.6vh;">Website where you can visualise basic Sorting techniques</h1>
+    <div class="dropdown">
+        <button class="btn btn-primary button-response dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+        Algorithms
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+        <li><button onclick="bubble()" class="dropdown-item button-response" type="button">Bubble Sort</button></li>
+        <li><button onclick="insertion()" class="dropdown-item button-response" type="button">Insertion Sort</button></li>
+        <li><button onclick="selection()" class="dropdown-item button-response" type="button">Selection Sort</button></li>
+        <li><button onclick="merge()" class="dropdown-item button-response" type="button">Merge Sort</button></li>
+        <li><button onclick="heap()" class="dropdown-item button-response" type="button">Heap Sort</button></li>
+        <li><button onclick="quick()" class="dropdown-item button-response" type="button">Quick Sort</button></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><button onclick="removeContent()" class="dropdown-item button-response" type="button">None</button></li>
+        </ul>
+        <button class="btn btn-danger button-response content-end" onclick="randomize()" type="button" aria-expanded="false">
+        Randomize Array
+        </button>
+    </div>
+    <p id="demo"></p>
+    <div class="bar-container">
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+        <div class="container-bar" style="width:2px; height: 0px; left:0px; bottom:0px;"></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="index.js" charset="utf-8"></script>
+</body>
+<footer class="foot">
+    <div class="container-fluid">
+        <a href="https://github.com/venkatasai24"  target="_blank" class="foot-link"><i class="social-icon fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/venkata-sai-vedurupaka/"  target="_blank" class="foot-link"><i class="social-icon fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/venkatasai__24/"  target="_blank" class="foot-link"><i class="social-icon fab fa-instagram"></i></a>
+        <p style="font-family: Arial, Helvetica, sans-serif ;">© Venkata Sai</a></p>
+    </div>
+</footer>
+</html>
+
