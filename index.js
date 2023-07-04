@@ -39,13 +39,6 @@ function quick()
     animate($("#demo"));
 }
 
-function removeContent()
-{
-    randomize();
-    $("#demo").html("");
-    animate($("#demo"));
-}
-
 var flag = false ;
 
 var ArrayLength = document.querySelectorAll(".container-bar").length;
@@ -524,8 +517,8 @@ function reAssignRed()
 
 function animate(element)
 {
-    element.slideUp(0).slideDown(1000);
-    //element.fadeOut(0).fadeIn(1000);
+    //element.slideUp(0).slideDown(1000);
+    element.fadeOut(0).fadeIn(1000);
 }
 
 function animateBar(element)
