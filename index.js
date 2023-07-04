@@ -21,21 +21,21 @@ function selection()
 function merge()
 {
     randomize();
-    $("#demo").html("<strong><a href='https://www.geeksforgeeks.org/merge-sort/' target='_blank'>Merge Sort</a></strong><br>Merge sort is a sorting algorithm that works by dividing an array into smaller subarrays, sorting each subarray, and then merging the sorted subarrays back together to form the final sorted array. In simple terms, we can say that the process of merge sort is to divide the array into two halves, sort each half, and then merge the sorted halves back together. This process is repeated until the entire array is sorted.<br>Time Complexity : O(Nlog(N)) <br>Auxiliary Space : O(N) <br><br> <center><button type='button' onclick='mergeSort()' class='btn button-response btn-info' style='color: white;' >Start</button></center> ");
+    $("#demo").html("<strong><a href='https://www.geeksforgeeks.org/merge-sort/' target='_blank'>Merge Sort</a></strong><br>Merge sort is a sorting algorithm that works by dividing an array into smaller subarrays, sorting each subarray, and then merging the sorted subarrays back together to form the final sorted array. In simple terms, we can say that the process of merge sort is to divide the array into two halves, sort each half, and then merge the sorted halves back together. This process is repeated until the entire array is sorted.<br>Time Complexity : O(NlogN) <br>Auxiliary Space : O(N) <br><br> <center><button type='button' onclick='mergeSort()' class='btn button-response btn-info' style='color: white;' >Start</button></center> ");
     animate($("#demo"));
 }
 
 function heap()
 {
     randomize();
-    $("#demo").html("<strong><a href='https://www.geeksforgeeks.org/heap-sort/' target='_blank'>Heap Sort</a></strong><br>Heap sort is a comparison-based sorting technique based on Binary Heap data structure. It is similar to the selection sort where we first find the minimum element and place the minimum element at the beginning. Repeat the same process for the remaining elements.<br>Time Complexity : O(Nlog(N)) <br>Auxiliary Space : O(1) <br><br> <center><button type='button' onclick='heapSort()' class='btn button-response btn-info' style='color: white;' >Start</button></center> ");
+    $("#demo").html("<strong><a href='https://www.geeksforgeeks.org/heap-sort/' target='_blank'>Heap Sort</a></strong><br>Heap sort is a comparison-based sorting technique based on Binary Heap data structure. It is similar to the selection sort where we first find the minimum element and place the minimum element at the beginning. Repeat the same process for the remaining elements.<br>Time Complexity : O(NlogN) <br>Auxiliary Space : O(1) <br><br> <center><button type='button' onclick='heapSort()' class='btn button-response btn-info' style='color: white;' >Start</button></center> ");
     animate($("#demo"));
 }
 
 function quick()
 {
     randomize();
-    $("#demo").html("<strong><a href='https://www.geeksforgeeks.org/quick-sort/' target='_blank'>Quick Sort</a></strong><br> QuickSort is a Divide and Conquer algorithm. It picks an element as a pivot and partitions the given array around the picked pivot. There are many different versions of quickSort that pick pivot in different ways.<br>Time Complexity : O(Nlog(N)) <br>Auxiliary Space : O(Nlog(N)) <br><br> <center><button type='button' onclick='quickSort()' class='btn button-response btn-info' style='color: white;' >Start</button></center> ");
+    $("#demo").html("<strong><a href='https://www.geeksforgeeks.org/quick-sort/' target='_blank'>Quick Sort</a></strong><br> QuickSort is a Divide and Conquer algorithm. It picks an element as a pivot and partitions the given array around the picked pivot. There are many different versions of quickSort that pick pivot in different ways.<br>Time Complexity : O(NlogN) <br>Auxiliary Space : O(NlogN) <br><br> <center><button type='button' onclick='quickSort()' class='btn button-response btn-info' style='color: white;' >Start</button></center> ");
     animate($("#demo"));
 }
 
