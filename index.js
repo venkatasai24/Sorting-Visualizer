@@ -1,41 +1,41 @@
 function bubble()
 {
     randomize();
-    $("#demo").html("<strong><a href='https://www.geeksforgeeks.org/bubble-sort/' style='color:black;' target='_blank'>Bubble Sort</a></strong><br>Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in the wrong order. This algorithm is not suitable for large data sets as its average and worst-case time complexity is quite high.<br>Time Complexity : O(N<sup>2</sup>) <br>Space Complexity : O(1) <br><br> <center><button type='button' onclick='bubbleSort()' class='btn button-response btn-info' style='color: white;' >Start</button></center>");
+    $("#demo").html("<strong><a href='https://www.geeksforgeeks.org/bubble-sort/' target='_blank'>Bubble Sort</a></strong><br>Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in the wrong order. This algorithm is not suitable for large data sets as its average and worst-case time complexity is quite high.<br>Time Complexity : O(N<sup>2</sup>) <br>Space Complexity : O(1) <br><br> <center><button type='button' onclick='bubbleSort()' class='btn button-response btn-info' style='color: white;' >Start</button></center>");
     animate($("#demo"));
 }
 function insertion()
 {
     randomize();
-    $("#demo").html("<strong><a href='https://www.geeksforgeeks.org/insertion-sort/' style='color:black;' target='_blank'>Insertion Sort</a></strong><br>Insertion sort is a simple sorting algorithm that works similar to the way you sort playing cards in your hands. The array is virtually split into a sorted and an unsorted part. Values from the unsorted part are picked and placed at the correct position in the sorted part.<br>Time Complexity : O(N<sup>2</sup>) <br>Auxiliary Space : O(1) <br><br> <center><button type='button' onclick='insertionSort()' class='btn button-response btn-info' style='color: white;' >Start</button></center> ");
+    $("#demo").html("<strong><a href='https://www.geeksforgeeks.org/insertion-sort/' target='_blank'>Insertion Sort</a></strong><br>Insertion sort is a simple sorting algorithm that works similar to the way you sort playing cards in your hands. The array is virtually split into a sorted and an unsorted part. Values from the unsorted part are picked and placed at the correct position in the sorted part.<br>Time Complexity : O(N<sup>2</sup>) <br>Auxiliary Space : O(1) <br><br> <center><button type='button' onclick='insertionSort()' class='btn button-response btn-info' style='color: white;' >Start</button></center> ");
     animate($("#demo"));
 }
 
 function selection()
 {
     randomize();
-    $("#demo").html("<strong><a href='https://www.geeksforgeeks.org/selection-sort/' style='color:black;' target='_blank'>Selection Sort</a></strong><br>Selection sort is a simple and efficient sorting algorithm that works by repeatedly selecting the smallest element from the unsorted portion of the list and moving it to the sorted portion of the list. The algorithm repeatedly selects the smallest element from the unsorted portion of the list and swaps it with the first element of the unsorted portion. This process is repeated for the remaining unsorted portion of the list until the entire list is sorted.<br>Time Complexity : O(N<sup>2</sup>) <br>Auxiliary Space : O(1) <br><br> <center><button type='button' onclick='selectionSort()' class='btn button-response btn-info' style='color: white;' >Start</button></center>");
+    $("#demo").html("<strong><a href='https://www.geeksforgeeks.org/selection-sort/' target='_blank'>Selection Sort</a></strong><br>Selection sort is a simple and efficient sorting algorithm that works by repeatedly selecting the smallest element from the unsorted portion of the list and moving it to the sorted portion of the list. The algorithm repeatedly selects the smallest element from the unsorted portion of the list and swaps it with the first element of the unsorted portion. This process is repeated for the remaining unsorted portion of the list until the entire list is sorted.<br>Time Complexity : O(N<sup>2</sup>) <br>Auxiliary Space : O(1) <br><br> <center><button type='button' onclick='selectionSort()' class='btn button-response btn-info' style='color: white;' >Start</button></center>");
     animate($("#demo"));
 }
 
 function merge()
 {
     randomize();
-    $("#demo").html("<strong><a href='https://www.geeksforgeeks.org/merge-sort/' style='color:black;' target='_blank'>Merge Sort</a></strong><br>Merge sort is a sorting algorithm that works by dividing an array into smaller subarrays, sorting each subarray, and then merging the sorted subarrays back together to form the final sorted array.In simple terms, we can say that the process of merge sort is to divide the array varo two halves, sort each half, and then merge the sorted halves back together. This process is repeated until the entire array is sorted.<br>Time Complexity : O(Nlog(N)) <br>Auxiliary Space : O(N) <br><br> <center><button type='button' onclick='mergeSort()' class='btn button-response btn-info' style='color: white;' >Start</button></center> ");
+    $("#demo").html("<strong><a href='https://www.geeksforgeeks.org/merge-sort/' target='_blank'>Merge Sort</a></strong><br>Merge sort is a sorting algorithm that works by dividing an array into smaller subarrays, sorting each subarray, and then merging the sorted subarrays back together to form the final sorted array. In simple terms, we can say that the process of merge sort is to divide the array into two halves, sort each half, and then merge the sorted halves back together. This process is repeated until the entire array is sorted.<br>Time Complexity : O(Nlog(N)) <br>Auxiliary Space : O(N) <br><br> <center><button type='button' onclick='mergeSort()' class='btn button-response btn-info' style='color: white;' >Start</button></center> ");
     animate($("#demo"));
 }
 
 function heap()
 {
     randomize();
-    $("#demo").html("<strong><a href='https://www.geeksforgeeks.org/heap-sort/' style='color:black;' target='_blank'>Heap Sort</a></strong><br>Heap sort is a comparison-based sorting technique based on Binary Heap data structure. It is similar to the selection sort where we first find the minimum element and place the minimum element at the beginning. Repeat the same process for the remaining elements.<br>Time Complexity : O(Nlog(N)) <br>Auxiliary Space : O(1) <br><br> <center><button type='button' onclick='heapSort()' class='btn button-response btn-info' style='color: white;' >Start</button></center> ");
+    $("#demo").html("<strong><a href='https://www.geeksforgeeks.org/heap-sort/' target='_blank'>Heap Sort</a></strong><br>Heap sort is a comparison-based sorting technique based on Binary Heap data structure. It is similar to the selection sort where we first find the minimum element and place the minimum element at the beginning. Repeat the same process for the remaining elements.<br>Time Complexity : O(Nlog(N)) <br>Auxiliary Space : O(1) <br><br> <center><button type='button' onclick='heapSort()' class='btn button-response btn-info' style='color: white;' >Start</button></center> ");
     animate($("#demo"));
 }
 
 function quick()
 {
     randomize();
-    $("#demo").html("<strong><a href='https://www.geeksforgeeks.org/quick-sort/' style='color:black;' target='_blank'>Quick Sort</a></strong><br> QuickSort is a Divide and Conquer algorithm. It picks an element as a pivot and partitions the given array around the picked pivot. There are many different versions of quickSort that pick pivot in different ways.<br>Time Complexity : O(Nlog(N)) <br>Auxiliary Space : O(Nlog(N)) <br><br> <center><button type='button' onclick='quickSort()' class='btn button-response btn-info' style='color: white;' >Start</button></center> ");
+    $("#demo").html("<strong><a href='https://www.geeksforgeeks.org/quick-sort/' target='_blank'>Quick Sort</a></strong><br> QuickSort is a Divide and Conquer algorithm. It picks an element as a pivot and partitions the given array around the picked pivot. There are many different versions of quickSort that pick pivot in different ways.<br>Time Complexity : O(Nlog(N)) <br>Auxiliary Space : O(Nlog(N)) <br><br> <center><button type='button' onclick='quickSort()' class='btn button-response btn-info' style='color: white;' >Start</button></center> ");
     animate($("#demo"));
 }
 
@@ -57,6 +57,8 @@ var indices=[];
 var delay = 2 ;
 
 var functionNumber = 0;
+
+const randomButton = document.getElementById("randomButton");
 
 var barContainerWidth =  window.getComputedStyle(document.querySelector(".bar-container")).width;
 
@@ -147,6 +149,9 @@ async function bubbleSort()
     if( flag===false )
     {
         flag=true;
+        randomButton.classList.add("danger");
+        var start = document.querySelector("#start");
+        start.classList.add("danger");
         functionNumber = 1 ;
         var randomFlag;
         for(var i=0;i<ArrayLength-1;i++)
@@ -181,6 +186,9 @@ async function insertionSort()
     if( flag===false )
     {
         flag=true;
+        randomButton.classList.add("danger");
+        var start = document.querySelector("#start");
+        start.classList.add("danger");
         functionNumber =  1 ;
         var i, j , n=ArrayLength;
         for( i=1 ; i < n ; i++ )
@@ -208,6 +216,9 @@ async function selectionSort()
     if( flag===false )
     {
         flag=true;
+        randomButton.classList.add("danger");
+        var start = document.querySelector("#start");
+        start.classList.add("danger");
         var i, j, min_idx , n=ArrayLength; 
         for (i = 0; i < n-1; i++)
         {
@@ -323,6 +334,9 @@ function mergeSort()
     if( flag===false )
     {
         flag=true;
+        randomButton.classList.add("danger");
+        var start = document.querySelector("#start");
+        start.classList.add("danger");
         functionNumber = 2 ;
         const startTime = performance.now();
         MergeSort(array,ArrayLength).then(() => {
@@ -395,6 +409,9 @@ function heapSort()
     if( flag===false )
     {
         flag=true;
+        randomButton.classList.add("danger");
+        var start = document.querySelector("#start");
+        start.classList.add("danger");
         functionNumber = 2 ;
         const startTime = performance.now();
         HeapSort(array,ArrayLength).then(() => {
@@ -461,6 +478,9 @@ function quickSort()
     if( flag===false )
     {
         flag=true;
+        randomButton.classList.add("danger");
+        var start = document.querySelector("#start");
+        start.classList.add("danger");
         functionNumber = 2;
         const startTime = performance.now();
         quickSortIterative(array,0,ArrayLength-1).then(() => {
@@ -485,6 +505,9 @@ async function reAssign()
         element.classList.add("final");
         await sleep(1);
     }
+    randomButton.classList.remove("danger");
+    var start = document.querySelector("#start");
+    start.classList.remove("danger");
 }
 
 function reAssignRed()
