@@ -61,46 +61,13 @@ barContainerHeight = barContainerHeight.replace(/px/g,"");
 
 barContainerWidth = barContainerWidth.replace(/px/g,"");
 
-async function headerName()
-{
-    $("#sort").html("hjsjhbs fjffywfijh");
-    await sleep(100);
-    $("#sort").html("dhbsdjg kjfhhsjhhd");
-    await sleep(100);
-    $("#sort").html("hejhfng ncvbkhfjhh");
-    await sleep(100);
-    $("#sort").html("lsdning ukghfvjhfa");
-    await sleep(100);
-    $("#sort").html("hjjting fjffywfijh");
-    await sleep(100);
-    $("#sort").html("drrting dvkfivfhfu");
-    await sleep(100);
-    $("#sort").html("norting phgfhfkhfs");
-    await sleep(100);
-    $("#sort").html("Sorting jkhkfkhfkw");
-    await sleep(100);
-    $("#sort").html("Sorting bugydghfjj");
-    await sleep(100);
-    $("#sort").html("Sorting lkjhgfdsar");
-    await sleep(100);
-    $("#sort").html("Sorting ghskerbher");
-    await sleep(100);
-    $("#sort").html("Sorting kjfhhsjzer");
-    await sleep(100);
-    $("#sort").html("Sorting ncvbkhizer");
-    await sleep(100);
-    $("#sort").html("Sorting ukghflizer");
-    await sleep(100);
-    $("#sort").html("Sorting fjffalizer");
-    await sleep(100);
-    $("#sort").html("Sorting dvkualizer");
-    await sleep(100);
-    $("#sort").html("Sorting phsualizer");
-    await sleep(100);
-    $("#sort").html("Sorting lisualizer");
-    await sleep(100);
-    $("#sort").html("Sorting Visualizer");
-}
+const typed = new Typed(".sort", {
+  strings: ["Sorting Visualizer"],
+  typeSpeed: 100,
+  backSpeed: 100,
+  backDelay: 1000,
+  loop: true,
+});
 
 function randomize()
 {
@@ -124,12 +91,6 @@ function randomize()
             element.classList.remove("final");
         }
     }
-}
-
-function randomizeEntire()
-{
-    headerName();
-    randomize();
 }
 
 function sleep(ms) 
