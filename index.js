@@ -290,12 +290,12 @@ function mergeSort()
         var start = document.querySelector("#start");
         start.classList.add("danger");
         functionNumber = 2 ;
-        const startTime = performance.now();
+        // const startTime = performance.now();
         MergeSort(array,ArrayLength).then(() => {
-        const endTime = performance.now();
-        const executionTime = endTime - startTime;
-        period=executionTime;
-        console.log(`Execution time: ${executionTime} milliseconds`);
+        // const endTime = performance.now();
+        // const executionTime = endTime - startTime;
+        // period=executionTime;
+        // console.log(`Execution time: ${executionTime} milliseconds`);
         reAssign();
         flag=false;
         });
@@ -365,12 +365,12 @@ function heapSort()
         var start = document.querySelector("#start");
         start.classList.add("danger");
         functionNumber = 2 ;
-        const startTime = performance.now();
+        // const startTime = performance.now();
         HeapSort(array,ArrayLength).then(() => {
-        const endTime = performance.now();
-        const executionTime = endTime - startTime;
-        period=executionTime;
-        console.log(`Execution time: ${executionTime} milliseconds`);
+        // const endTime = performance.now();
+        // const executionTime = endTime - startTime;
+        // period=executionTime;
+        // console.log(`Execution time: ${executionTime} milliseconds`);
         reAssign();
         flag=false;
         });
@@ -434,12 +434,12 @@ function quickSort()
         var start = document.querySelector("#start");
         start.classList.add("danger");
         functionNumber = 2;
-        const startTime = performance.now();
+        // const startTime = performance.now();
         quickSortIterative(array,0,ArrayLength-1).then(() => {
-        const endTime = performance.now();
-        const executionTime = endTime - startTime;
-        period=executionTime;
-        console.log(`Execution time: ${executionTime} milliseconds`);
+        // const endTime = performance.now();
+        // const executionTime = endTime - startTime;
+        // period=executionTime;
+        // console.log(`Execution time: ${executionTime} milliseconds`);
         reAssign();
         flag=false;
         });
